@@ -144,14 +144,12 @@ const char* password = "MOT_DE_PASSE_WIFI";
 ```bash
 pip install opencv-python numpy pyserial
 
-opencv-python : La bibliothèque de vision par ordinateur (OpenCV) utilisée pour capturer et traiter le flux vidéo de la caméra ESP32-S3, dessiner les grilles et analyser les tracés.
+```
+> **Note :opencv-python : La bibliothèque de vision par ordinateur (OpenCV) utilisée pour capturer et traiter le flux vidéo de la caméra ESP32-S3, dessiner les grilles et analyser les tracés.**
 
 numpy : Une bibliothèque mathématique essentielle pour manipuler rapidement les matrices et les tableaux de données (utilisée notamment pour gérer la grille binaire 20x20).
 
 pyserial : La bibliothèque qui permet à votre script Python de communiquer par liaison série (UART) avec vos microcontrôleurs via les ports COM.
-
-```
-
 
 
 ---

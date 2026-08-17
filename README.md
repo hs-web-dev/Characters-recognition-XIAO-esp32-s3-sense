@@ -72,11 +72,12 @@ const char* password = "YOUR_WIFI_PASSWORD";
 
 1. Ensure you have **Python** installed on your computer.
 2. Open your terminal (or command prompt) and run the following command to install the required libraries:
+---
 ```bash
 pip install opencv-python numpy pyserial
 
 ```
-
+---
 
 
 ---
@@ -141,15 +142,17 @@ const char* password = "MOT_DE_PASSE_WIFI";
 
 1. Assurez-vous d'avoir **Python** installé sur votre machine.
 2. Ouvrez votre terminal (ou invite de commande) et tapez la commande suivante pour installer les bibliothèques indispensables :
+---
 ```bash
 pip install opencv-python numpy pyserial
 
 ```
+---
 > **Note :opencv-python : La bibliothèque de vision par ordinateur (OpenCV) utilisée pour capturer et traiter le flux vidéo de la caméra ESP32-S3, dessiner les grilles et analyser les tracés.**
 
-numpy : Une bibliothèque mathématique essentielle pour manipuler rapidement les matrices et les tableaux de données (utilisée notamment pour gérer la grille binaire 20x20).
+> **Notenumpy : Une bibliothèque mathématique essentielle pour manipuler rapidement les matrices et les tableaux de données (utilisée notamment pour gérer la grille binaire 20x20).**
 
-pyserial : La bibliothèque qui permet à votre script Python de communiquer par liaison série (UART) avec vos microcontrôleurs via les ports COM.
+> **Notepyserial : La bibliothèque qui permet à votre script Python de communiquer par liaison série (UART) avec vos microcontrôleurs via les ports COM.**
 
 
 ---

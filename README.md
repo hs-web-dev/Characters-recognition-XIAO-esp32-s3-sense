@@ -129,7 +129,7 @@ const char* password = "MOT_DE_PASSE_WIFI";
 
 
 5. Branchez votre ESP32-S3 en USB, sélectionnez votre carte et le bon **Port COM** dans le menu `Outils`, puis cliquez sur `Téléverser`.
-6. Ouvrez le `Moniteur Série` (réglez la vitesse sur `115200`), appuyez sur le bouton de réinitialisation de la carte, et notez l'**Adresse IP** qui s'affiche (ex: `192.168.1.50`).
+6. Ouvrez le `Moniteur Série` (Outils > Moniteur série), (réglez la vitesse sur `115200`), appuyez sur le bouton de réinitialisation de la carte, et notez l'**Adresse IP** qui s'affiche (ex: `192.168.1.50`).
 
 ---
 

@@ -186,7 +186,7 @@ python main.py --ip <ADRESSE_IP_ESP32> --com <VOTRE_PORT_COM>
 * *Exemple :* `python main.py --ip 192.168.1.50 --com COM6`
 
 
-3. Appuyez sur **Entrée** et patientez pendant le transfert. Actualisez votre page GitHub : votre projet y est désormais en ligne !
+3. Appuyez sur **Entrée** et patientez pendant le transfert. La suite des instructions se trouvent dans votre terminal
 
 
 # ✍️ ESP32-S3 Real-Time Air Writing & Character Recognition

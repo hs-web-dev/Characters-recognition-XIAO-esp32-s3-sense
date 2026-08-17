@@ -164,7 +164,9 @@ python main.py --ip <ADRESSE_IP_ESP32> --com <VOTRE_PORT_COM>
 
 Un système de reconnaissance de caractères en temps réel basé sur un flux vidéo **ESP32-S3 Sense** et **OpenCV**, utilisant une grille binaire 20x20 et un apprentissage direct par fichier texte avec communication série.
 
-<p align="center"><img src="images/motdepasse.png" width="600"></p>
+<p align="center">
+  <img src="https://picsum.photos/800/450" width="600" alt="Aperçu du projet">
+</p>
 
 ---
 

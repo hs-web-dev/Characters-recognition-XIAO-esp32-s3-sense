@@ -124,7 +124,7 @@ const char* password = "MOT_DE_PASSE_WIFI";
 
 ```
 <p align="center">
-  <img src="Documents/test_signe/images/motdepasse.png" width="600" alt="Aperçu du projet">
+  <img src="Images/motdepasse.png" width="600" alt="Aperçu du projet">
 </p>
 
 

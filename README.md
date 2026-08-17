@@ -115,15 +115,15 @@ python main.py --ip <ESP32_IP_ADDRESS> --com <YOUR_PC_COM_PORT>
 ### Étape 1 : Flasher le serveur web de la caméra sur l'ESP32-S3
 
 1. **Ouvrez** le logiciel **Arduino IDE** sur votre ordinateur.
-2. Allez dans le menu `Fichier` > `Exemples` > `ESP32` > `Camera` et choisissez `CameraWebServer`.
-3. Dans le code, **décommentez** la ligne correspondant au modèle exact de votre carte caméra (par exemple `#define CAMERA_MODEL_XIAO_ESP32S3` ou le module adapté à votre ESP32-S3).
-4. Renseignez les identifiants de votre réseau Wi-Fi dans le code :
+2. Allez dans le menu `Outils` > `Carte` > `Gestionnaire de cartes` > `esp32 par Espressif Systems (3 3.11)`.
+3. Ensuite allez dans Outils > Carte, Une case esp32 est alors apparue, cliquer dessus descendez et sélectionnez XIAO_ESP32S3.
+4. Importez le fichier "" si pas déjà fait. Renseignez les identifiants de votre réseau Wi-Fi dans le code :
 ```cpp
 const char* ssid = "NOM_DE_VOTRE_WIFI";
 const char* password = "MOT_DE_PASSE_WIFI";
 
 ```
-
+<p align="center"><img src="Documents/test_signe/images/motdepasse.png" width="600"></p>
 
 5. Branchez votre ESP32-S3 en USB, sélectionnez votre carte et le bon **Port COM** dans le menu `Outils`, puis cliquez sur `Téléverser`.
 6. Ouvrez le `Moniteur Série` (réglez la vitesse sur `115200`), appuyez sur le bouton de réinitialisation de la carte, et notez l'**Adresse IP** qui s'affiche (ex: `192.168.1.50`).

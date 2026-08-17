@@ -37,14 +37,9 @@ Contrairement aux pipelines de Machine Learning lourds, ce projet repose sur une
 * **Reconnaissance par fichier de configuration :** Comparaison des tracés effectuée entièrement à partir d'un fichier texte local structuré (`characters_config.txt`), sans dépendance à des bibliothèques de modèles complexes.
 * **Organisation automatique des versions :** Classement et regroupement automatique des nouvelles variantes par caractère (ex: toutes les versions du chiffre '1' ou de la lettre 'A' sont regroupées ensemble) lors de la validation ou de la correction par l'utilisateur.
 * **Communication Série UART :** Envoi instantané du caractère reconnu ou validé via le port série vers des microcontrôleurs ou du matériel externe.
-
-
-
-Voici le guide complet pas à pas, clic par clic, pour créer votre dépôt sur GitHub, y ajouter votre description et publier votre projet. Le guide est proposé en **anglais** (recommandé pour GitHub) et en **français**.
-
 ---
 
-## English Setup Guide
+# English Setup Guide
 
 ### Step 1: Flash the ESP32-S3 Camera Web Server
 
@@ -96,7 +91,7 @@ python main.py --ip <ESP32_IP_ADDRESS> --com <YOUR_PC_COM_PORT>
 
 ---
 
-## Guide d'installation en Français
+# Guide d'installation en Français
 
 ### Étape 1 : Flasher le serveur web de la caméra sur l'ESP32-S3
 

@@ -123,7 +123,7 @@ const char* ssid = "NOM_DE_VOTRE_WIFI";
 const char* password = "MOT_DE_PASSE_WIFI";
 
 ```
-<p align="center"><img src="Documents/test_signe/images/motdepasse.png" width="600"></p>
+<p align="center"><img src="Dtest_signe/images/motdepasse.png" width="600"></p>
 
 5. Branchez votre ESP32-S3 en USB, sélectionnez votre carte et le bon **Port COM** dans le menu `Outils`, puis cliquez sur `Téléverser`.
 6. Ouvrez le `Moniteur Série` (réglez la vitesse sur `115200`), appuyez sur le bouton de réinitialisation de la carte, et notez l'**Adresse IP** qui s'affiche (ex: `192.168.1.50`).

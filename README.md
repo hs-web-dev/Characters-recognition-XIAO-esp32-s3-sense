@@ -170,7 +170,6 @@ Un système de reconnaissance de caractères en temps réel basé sur un flux vi
 <p align="center">
   <img src="images/motdepasse.png" width="600" alt="Aperçu du projet">
 </p>
-
 ---
 
 ## <u>Guide d'installation / Setup Guide</u>

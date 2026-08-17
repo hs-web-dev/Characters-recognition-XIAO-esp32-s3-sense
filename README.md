@@ -39,6 +39,15 @@ Contrairement aux pipelines de Machine Learning lourds, ce projet repose sur une
 * **Communication Série UART :** Envoi instantané du caractère reconnu ou validé via le port série vers des microcontrôleurs ou du matériel externe.
 ---
 
+
+
+
+
+
+
+
+
+
 # English Setup Guide
 
 ### Step 1: Flash the ESP32-S3 Camera Web Server
@@ -89,7 +98,17 @@ python main.py --ip <ESP32_IP_ADDRESS> --com <YOUR_PC_COM_PORT>
 
 ---
 
----
+
+
+
+
+
+
+
+
+
+
+
 
 # Guide d'installation en Français
 

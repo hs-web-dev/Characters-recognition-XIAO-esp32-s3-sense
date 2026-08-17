@@ -129,7 +129,7 @@ const char* password = "MOT_DE_PASSE_WIFI";
 
 
 5. Branchez votre ESP32-S3 en USB, sélectionnez votre carte et le bon **Port COM** dans le menu `Outils`, puis cliquez sur `Téléverser`.
-6. Ouvrez le `Moniteur Série` (Outils > Moniteur série), (réglez la vitesse sur `115200`), appuyez sur le bouton de réinitialisation de la carte, et notez l'**Adresse IP** qui s'affiche (ex: `192.168.1.50`).
+6. Ouvrez le `Moniteur Série` (Outils > Moniteur série), (réglez la vitesse sur `115200`) le boutton se trouve en bas a droite, appuyez sur le bouton de réinitialisation de la carte (celui a gauche du port usb-c), et notez l'**Adresse IP** qui s'affiche (ex: `192.168.1.50`).
 
 <p align="center">
   <img src="Images/Baud.png" width="600" alt="Aperçu du projet">
@@ -143,6 +143,12 @@ const char* password = "MOT_DE_PASSE_WIFI";
 2. Ouvrez votre terminal (ou invite de commande) et tapez la commande suivante pour installer les bibliothèques indispensables :
 ```bash
 pip install opencv-python numpy pyserial
+
+opencv-python : La bibliothèque de vision par ordinateur (OpenCV) utilisée pour capturer et traiter le flux vidéo de la caméra ESP32-S3, dessiner les grilles et analyser les tracés.
+
+numpy : Une bibliothèque mathématique essentielle pour manipuler rapidement les matrices et les tableaux de données (utilisée notamment pour gérer la grille binaire 20x20).
+
+pyserial : La bibliothèque qui permet à votre script Python de communiquer par liaison série (UART) avec vos microcontrôleurs via les ports COM.
 
 ```
 

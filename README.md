@@ -161,7 +161,7 @@ pip install opencv-python numpy pyserial
 
 1. Téléchargez le fichier en .zip sur votre ordinateur.
 <p align="center">
-  <img src="Images/Baud.png" width="600" alt="Aperçu du projet">
+  <img src="Images/telecharge.png" width="600" alt="Aperçu du projet">
 </p>
 
 2. Ouvrez votre terminal directement **à l'intérieur du dossier** du projet.

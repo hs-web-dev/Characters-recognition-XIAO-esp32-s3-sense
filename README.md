@@ -163,3 +163,23 @@ python main.py --ip <ADRESSE_IP_ESP32> --com <VOTRE_PORT_COM>
 3. Appuyez sur **Entrée** et patientez pendant le transfert. Actualisez votre page GitHub : votre projet y est désormais en ligne !
 
 
+# ✍️ ESP32-S3 Real-Time Air Writing & Character Recognition
+
+Un système de reconnaissance de caractères en temps réel basé sur un flux vidéo **ESP32-S3 Sense** et **OpenCV**, utilisant une grille binaire 20x20 et un apprentissage direct par fichier texte avec communication série.
+
+<p align="center">
+  <img src="images/motdepasse.png" width="600" alt="Aperçu du projet">
+</p>
+
+---
+
+## <u>Guide d'installation / Setup Guide</u>
+
+### <u>1. Flasher l'ESP32-S3 / Flash the ESP32-S3</u>
+1. Ouvrez **Arduino IDE**.
+2. Allez dans `Fichier` > `Exemples` > `ESP32` > `Camera` et choisissez `CameraWebServer`.
+3. Décommentez la ligne correspondant à votre modèle de carte (ex: `#define CAMERA_MODEL_XIAO_ESP32S3`).
+4. Renseignez vos identifiants Wi-Fi :
+   ```cpp
+   const char* ssid = "VOTRE_WIFI";
+   const char* password = "VOTRE_MOT_DE_PASSE";

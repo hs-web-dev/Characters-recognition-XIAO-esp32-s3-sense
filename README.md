@@ -48,56 +48,77 @@ Contrairement aux pipelines de Machine Learning lourds, ce projet repose sur une
 
 
 
-# English Setup Guide
+# Installation Guide in English
 
-### Step 1: Flash the ESP32-S3 Camera Web Server
-
+### Step 1: Flash the camera web server onto the ESP32-S3
 1. **Open** the **Arduino IDE** software on your computer.
-2. Navigate to `File` > `Examples` > `ESP32` > `Camera` and select `CameraWebServer`.
-3. Scroll through the code and **uncomment** the line matching your specific camera board model (e.g., `#define CAMERA_MODEL_XIAO_ESP32S3` or your specific ESP32-S3 module).
-4. Enter your local Wi-Fi credentials in the script:
+2. Go to the menu `Tools` > `Board` > `Boards Manager` > `esp32 by Espressif Systems (3.3.11)`.
+3. Then go to Tools > Board, an esp32 box will appear, click on it, scroll down and select XIAO_ESP32S3.
+4. Import the file "" if not already done. Enter your Wi-Fi network credentials in the code:
 ```cpp
 const char* ssid = "YOUR_WIFI_NAME";
-const char* password = "YOUR_WIFI_PASSWORD";
-
+const char* password = "WIFI_PASSWORD";
 ```
+<p align="center">
+  <img src="Images/motdepasse.png" width="600" alt="Project preview">
+</p>
 
+5. Plug in your ESP32-S3 via USB, select your board and the correct **COM Port** in the `Tools` menu, then click `Upload`.
+6. Open the `Serial Monitor` (Tools > Serial Monitor), (set the baud rate to `115200`) the button is in the bottom right, press the board's reset button (the one to the left of the USB-C port), and note the **IP Address** that appears (e.g.: `192.168.1.50`).
 
-5. Connect your ESP32-S3 to your PC via USB, select your board and the correct **COM Port** in the `Tools` menu, and click `Upload`.
-6. Open the `Serial Monitor` (set baud rate to `115200`), press the reset button on your board, and copy the **IP Address** assigned by your router (e.g., `192.168.1.50`).
+<p align="center">
+  <img src="Images/Baud.png" width="600" alt="Project preview">
+</p>
 
 ---
 
-### Step 2: Install Python Dependencies
+### Step 2: Install the Python dependencies
+1. Make sure you have **Python** installed on your machine.
+2. Open your terminal (or command prompt) and type the following command to install the required libraries:
 
-1. Ensure you have **Python** installed on your computer.
-2. Open your terminal (or command prompt) and run the following command to install the required libraries:
 ---
+
 ```bash
 pip install opencv-python numpy pyserial
-
 ```
----
-
 
 ---
 
-### Step 3: Run the Python Script
+> **Note: opencv-python — The computer vision library (OpenCV) used to capture and process the ESP32-S3 camera's video stream, draw the grids, and analyze the traces.**
+> **Note: numpy — An essential math library for quickly manipulating matrices and data arrays (used in particular to manage the 20x20 binary grid).**
+> **Note: pyserial — The library that allows your Python script to communicate over serial (UART) with your microcontrollers via COM ports.**
 
-1. Download or clone this repository to your computer.
-2. Open your terminal *inside* the project folder.
-3. Run the script by passing your **ESP32 IP address** and your computer's **COM port**:
+---
+
+### Step 3: Run the Python script
+1. Download the .zip file to your computer and click "Extract All".
+
+<p align="center">
+  <img src="Images/telecharge.png" width="600" alt="Project preview">
+</p>
+
+2. Open your terminal directly **inside the project folder**.
+
+<p align="center">
+  <img src="Images/CMD.png" width="600" alt="Project preview">
+</p>
+<p align="center">
+  <img src="Images/CMD2.png" width="600" alt="Project preview">
+</p>
+
+4. Run the program, providing your ESP32's **IP address** and your **COM port**:
+
+---
+
 ```bash
-python main.py --ip <ESP32_IP_ADDRESS> --com <YOUR_PC_COM_PORT>
-
+python main.py --ip <ESP32_IP_ADDRESS> --com <YOUR_COM_PORT>
 ```
 
+---
 
 * *Example:* `python main.py --ip 192.168.1.50 --com COM6`
 
-
-
----
+3. Press **Enter** and wait for the transfer to complete. Further instructions can be found in your terminal.
 
 
 

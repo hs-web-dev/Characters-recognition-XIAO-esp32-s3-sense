@@ -159,13 +159,19 @@ pip install opencv-python numpy pyserial
 
 ### Étape 3 : Lancer le script Python
 
-1. Téléchargez le fichier en .zip sur votre ordinateur.
+1. Téléchargez le fichier en .zip sur votre ordinateur et cliqué "Extraire tout".
 <p align="center">
   <img src="Images/telecharge.png" width="600" alt="Aperçu du projet">
 </p>
 
 2. Ouvrez votre terminal directement **à l'intérieur du dossier** du projet.
-3. Lancez le programme en indiquant l'**adresse IP de votre ESP32** et votre **port de communication (COM)** :
+<p align="center">
+  <img src="Images/CMD.png" width="600" alt="Aperçu du projet">
+</p>
+<p align="center">
+  <img src="Images/CMD2.png" width="600" alt="Aperçu du projet">
+</p>
+4. Lancez le programme en indiquant l'**adresse IP de votre ESP32** et votre **port de communication (COM)** :
 ```bash
 python main.py --ip <ADRESSE_IP_ESP32> --com <VOTRE_PORT_COM>
 

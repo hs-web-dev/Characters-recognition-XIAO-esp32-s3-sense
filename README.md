@@ -37,3 +37,71 @@ Contrairement aux pipelines de Machine Learning lourds, ce projet repose sur une
 * **Reconnaissance par fichier de configuration :** Comparaison des tracés effectuée entièrement à partir d'un fichier texte local structuré (`characters_config.txt`), sans dépendance à des bibliothèques de modèles complexes.
 * **Organisation automatique des versions :** Classement et regroupement automatique des nouvelles variantes par caractère (ex: toutes les versions du chiffre '1' ou de la lettre 'A' sont regroupées ensemble) lors de la validation ou de la correction par l'utilisateur.
 * **Communication Série UART :** Envoi instantané du caractère reconnu ou validé via le port série vers des microcontrôleurs ou du matériel externe.
+
+
+
+Voici le guide complet pas à pas, clic par clic, pour créer votre dépôt sur GitHub, y ajouter votre description et publier votre projet. Le guide est proposé en **anglais** (recommandé pour GitHub) et en **français**.
+
+---
+
+### 🇬🇧 English Version (Step-by-Step Click-by-Click Guide)
+
+#### Step 1: Create the Repository on GitHub
+
+1. Open your web browser and go to [github.com](https://github.com/). Log in to your account.
+2. In the **top-right corner** of the page, click on the **`+`** (plus) icon button.
+3. In the dropdown menu that appears, click on **`New repository`**.
+
+#### Step 2: Configure Your Repository Settings
+
+1. **Repository name:** Type your project name (e.g., `esp32-air-writing-recognition`).
+2. **Description (Optional):** Paste a short description (e.g., *Real-time character recognition using ESP32-S3, OpenCV, and a binary grid configuration file.*).
+3. Select **`Public`** (so anyone can view and download your files).
+4. **Important:** Leave **all boxes unchecked** underneath ("Add a README file", "Add .gitignore", "Choose a license"), because you already created them locally.
+5. Scroll down to the bottom of the page and click the green **`Create repository`** button.
+
+#### Step 3: Push Your Files from Your Computer
+
+1. Open your computer's terminal (or command prompt) inside your project folder.
+2. Copy and paste the commands provided by GitHub on the screen (they will look like this, adapted to your username):
+```bash
+git branch -M main
+git remote add origin https://github.com/your-username/your-repository-name.git
+git push -u origin main
+
+```
+
+
+3. Press **Enter** and wait for the upload to complete. Refresh your GitHub page: your project is now online!
+
+---
+
+### 🇫🇷 French Version (Guide étape par étape, clic par clic)
+
+#### Étape 1 : Créer le dépôt sur GitHub
+
+1. Ouvrez votre navigateur internet et rendez-vous sur [github.com](https://github.com/). Connectez-vous à votre compte.
+2. Dans le **coin supérieur droit** de la page, cliquez sur le bouton représentant un **`+`** (plus).
+3. Dans le menu déroulant qui s'ouvre, cliquez sur **`New repository`** (Nouveau dépôt).
+
+#### Étape 2 : Configurer les paramètres du dépôt
+
+1. **Repository name (Nom du dépôt) :** Tapez le nom de votre projet (par exemple : `esp32-air-writing-recognition`).
+2. **Description (Optionnel) :** Collez une courte description (par ex. : *Reconnaissance de caractères en temps réel avec ESP32-S3, OpenCV et grille binaire.*).
+3. Cochez l'option **`Public`** (pour que tout le monde puisse voir et télécharger vos fichiers).
+4. **Très important :** Ne cochez **aucune** des cases en dessous ("Add a README file", "Add .gitignore", "Choose a license"), car vous les avez déjà créées sur votre ordinateur.
+5. Faites défiler la page tout en bas et cliquez sur le gros bouton vert **`Create repository`** (Créer le dépôt).
+
+#### Étape 3 : Envoyer vos fichiers depuis votre ordinateur
+
+1. Ouvrez le terminal (ou l'invite de commande) de votre ordinateur directement à l'intérieur du dossier de votre projet.
+2. Copiez et collez les commandes affichées par GitHub à l'écran (elles ressembleront à ceci, adaptées à votre nom d'utilisateur) :
+```bash
+git branch -M main
+git remote add origin https://github.com/votre-nom-utilisateur/nom-de-votre-depot.git
+git push -u origin main
+
+```
+
+
+3. Appuyez sur **Entrée** et patientez pendant le transfert. Actualisez votre page GitHub : votre projet y est désormais en ligne !

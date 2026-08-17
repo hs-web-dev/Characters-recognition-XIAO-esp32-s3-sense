@@ -44,64 +44,103 @@ Voici le guide complet pas à pas, clic par clic, pour créer votre dépôt sur 
 
 ---
 
-### 🇬🇧 English Version (Step-by-Step Click-by-Click Guide)
+## English Setup Guide
 
-#### Step 1: Create the Repository on GitHub
+### Step 1: Flash the ESP32-S3 Camera Web Server
 
-1. Open your web browser and go to [github.com](https://github.com/). Log in to your account.
-2. In the **top-right corner** of the page, click on the **`+`** (plus) icon button.
-3. In the dropdown menu that appears, click on **`New repository`**.
-
-#### Step 2: Configure Your Repository Settings
-
-1. **Repository name:** Type your project name (e.g., `esp32-air-writing-recognition`).
-2. **Description (Optional):** Paste a short description (e.g., *Real-time character recognition using ESP32-S3, OpenCV, and a binary grid configuration file.*).
-3. Select **`Public`** (so anyone can view and download your files).
-4. **Important:** Leave **all boxes unchecked** underneath ("Add a README file", "Add .gitignore", "Choose a license"), because you already created them locally.
-5. Scroll down to the bottom of the page and click the green **`Create repository`** button.
-
-#### Step 3: Push Your Files from Your Computer
-
-1. Open your computer's terminal (or command prompt) inside your project folder.
-2. Copy and paste the commands provided by GitHub on the screen (they will look like this, adapted to your username):
-```bash
-git branch -M main
-git remote add origin https://github.com/your-username/your-repository-name.git
-git push -u origin main
+1. **Open** the **Arduino IDE** software on your computer.
+2. Navigate to `File` > `Examples` > `ESP32` > `Camera` and select `CameraWebServer`.
+3. Scroll through the code and **uncomment** the line matching your specific camera board model (e.g., `#define CAMERA_MODEL_XIAO_ESP32S3` or your specific ESP32-S3 module).
+4. Enter your local Wi-Fi credentials in the script:
+```cpp
+const char* ssid = "YOUR_WIFI_NAME";
+const char* password = "YOUR_WIFI_PASSWORD";
 
 ```
 
 
-3. Press **Enter** and wait for the upload to complete. Refresh your GitHub page: your project is now online!
+5. Connect your ESP32-S3 to your PC via USB, select your board and the correct **COM Port** in the `Tools` menu, and click `Upload`.
+6. Open the `Serial Monitor` (set baud rate to `115200`), press the reset button on your board, and copy the **IP Address** assigned by your router (e.g., `192.168.1.50`).
 
 ---
 
-### 🇫🇷 French Version (Guide étape par étape, clic par clic)
+### Step 2: Install Python Dependencies
 
-#### Étape 1 : Créer le dépôt sur GitHub
-
-1. Ouvrez votre navigateur internet et rendez-vous sur [github.com](https://github.com/). Connectez-vous à votre compte.
-2. Dans le **coin supérieur droit** de la page, cliquez sur le bouton représentant un **`+`** (plus).
-3. Dans le menu déroulant qui s'ouvre, cliquez sur **`New repository`** (Nouveau dépôt).
-
-#### Étape 2 : Configurer les paramètres du dépôt
-
-1. **Repository name (Nom du dépôt) :** Tapez le nom de votre projet (par exemple : `esp32-air-writing-recognition`).
-2. **Description (Optionnel) :** Collez une courte description (par ex. : *Reconnaissance de caractères en temps réel avec ESP32-S3, OpenCV et grille binaire.*).
-3. Cochez l'option **`Public`** (pour que tout le monde puisse voir et télécharger vos fichiers).
-4. **Très important :** Ne cochez **aucune** des cases en dessous ("Add a README file", "Add .gitignore", "Choose a license"), car vous les avez déjà créées sur votre ordinateur.
-5. Faites défiler la page tout en bas et cliquez sur le gros bouton vert **`Create repository`** (Créer le dépôt).
-
-#### Étape 3 : Envoyer vos fichiers depuis votre ordinateur
-
-1. Ouvrez le terminal (ou l'invite de commande) de votre ordinateur directement à l'intérieur du dossier de votre projet.
-2. Copiez et collez les commandes affichées par GitHub à l'écran (elles ressembleront à ceci, adaptées à votre nom d'utilisateur) :
+1. Ensure you have **Python** installed on your computer.
+2. Open your terminal (or command prompt) and run the following command to install the required libraries:
 ```bash
-git branch -M main
-git remote add origin https://github.com/votre-nom-utilisateur/nom-de-votre-depot.git
-git push -u origin main
+pip install opencv-python numpy pyserial
 
 ```
+
+
+
+---
+
+### Step 3: Run the Python Script
+
+1. Download or clone this repository to your computer.
+2. Open your terminal *inside* the project folder.
+3. Run the script by passing your **ESP32 IP address** and your computer's **COM port**:
+```bash
+python main.py --ip <ESP32_IP_ADDRESS> --com <YOUR_PC_COM_PORT>
+
+```
+
+
+* *Example:* `python main.py --ip 192.168.1.50 --com COM6`
+
+
+
+---
+
+---
+
+## Guide d'installation en Français
+
+### Étape 1 : Flasher le serveur web de la caméra sur l'ESP32-S3
+
+1. **Ouvrez** le logiciel **Arduino IDE** sur votre ordinateur.
+2. Allez dans le menu `Fichier` > `Exemples` > `ESP32` > `Camera` et choisissez `CameraWebServer`.
+3. Dans le code, **décommentez** la ligne correspondant au modèle exact de votre carte caméra (par exemple `#define CAMERA_MODEL_XIAO_ESP32S3` ou le module adapté à votre ESP32-S3).
+4. Renseignez les identifiants de votre réseau Wi-Fi dans le code :
+```cpp
+const char* ssid = "NOM_DE_VOTRE_WIFI";
+const char* password = "MOT_DE_PASSE_WIFI";
+
+```
+
+
+5. Branchez votre ESP32-S3 en USB, sélectionnez votre carte et le bon **Port COM** dans le menu `Outils`, puis cliquez sur `Téléverser`.
+6. Ouvrez le `Moniteur Série` (réglez la vitesse sur `115200`), appuyez sur le bouton de réinitialisation de la carte, et notez l'**Adresse IP** qui s'affiche (ex: `192.168.1.50`).
+
+---
+
+### Étape 2 : Installer les dépendances Python
+
+1. Assurez-vous d'avoir **Python** installé sur votre machine.
+2. Ouvrez votre terminal (ou invite de commande) et tapez la commande suivante pour installer les bibliothèques indispensables :
+```bash
+pip install opencv-python numpy pyserial
+
+```
+
+
+
+---
+
+### Étape 3 : Lancer le script Python
+
+1. Téléchargez ou clonez ce dépôt sur votre ordinateur.
+2. Ouvrez votre terminal directement **à l'intérieur du dossier** du projet.
+3. Lancez le programme en indiquant l'**adresse IP de votre ESP32** et votre **port de communication (COM)** :
+```bash
+python main.py --ip <ADRESSE_IP_ESP32> --com <VOTRE_PORT_COM>
+
+```
+
+
+* *Exemple :* `python main.py --ip 192.168.1.50 --com COM6`
 
 
 3. Appuyez sur **Entrée** et patientez pendant le transfert. Actualisez votre page GitHub : votre projet y est désormais en ligne !

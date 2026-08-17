@@ -172,8 +172,9 @@ pip install opencv-python numpy pyserial
   <img src="Images/CMD2.png" width="600" alt="Aperçu du projet">
 </p>
 4. Lancez le programme en indiquant l'**adresse IP de votre ESP32** et votre **port de communication (COM)** :
----
 
+
+---
 
 ```bash
 python main.py --ip <ADRESSE_IP_ESP32> --com <VOTRE_PORT_COM>

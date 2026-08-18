@@ -209,7 +209,3 @@ python main.py --ip <ADRESSE_IP_ESP32> --com <VOTRE_PORT_COM>
 
 3. Appuyez sur **Entrée** et patientez pendant le transfert. La suite des instructions se trouvent dans votre terminal
 
-
-
-   const char* ssid = "VOTRE_WIFI";
-   const char* password = "VOTRE_MOT_DE_PASSE";

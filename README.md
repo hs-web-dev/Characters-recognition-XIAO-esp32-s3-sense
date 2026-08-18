@@ -1,6 +1,6 @@
 # Characters-recognition-XIAO-esp32-s3-sense
 
-### English Version
+### English Version 🇬🇧
 
 **ESP32-S3 Real-Time Air Writing & Character Recognition**
 
@@ -20,7 +20,7 @@ Unlike heavy machine learning pipelines, this project relies on a deterministic 
 
 ---
 
-### French Version
+### French Version 🇫🇷
 
 **Système de Reconnaissance d'Écriture et de Caractères en Temps Réel avec ESP32-S3**
 
